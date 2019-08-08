@@ -1,4 +1,4 @@
-#music-api setup
+# music-api setup
 
 ### Dev environment setup:
 ```bash
