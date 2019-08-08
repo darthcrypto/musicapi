@@ -54,3 +54,28 @@ python manage.py migrate
 ```bash
 python manage.py createsuperuser --email admin@example.com --username admin
 ```
+
+### add to settings.py rest_framework and music app:
+```bash
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'rest_framework',
+    'music'
+]
+```
+
+### add to urls.py the music app urls:
+```bash
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path(''), include('music.urls'))
+]
+```
